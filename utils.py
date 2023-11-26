@@ -385,7 +385,6 @@ def humanbytes(size):
     return str(round(size, 2)) + " " + Dic_powerN[n] + 'B'
     
 async def get_shortlink(link):
-    https = link.split(":")[0]
    if URL_SHORTENR_WEBSITE == "api.shareus.io":
     # Method 1
     # https = link.split(":")[0]  # splitting https or http from link
@@ -435,12 +434,8 @@ try:
     async with aiohttp.ClientSession() as session:
         async with session.get(url, params=params, raise_for_status=True, ssl=False) as response:
             data = await response.json()
-            if data["status"] == "success":
-                return data['shortenedUrl']
-            else:
-                logger.error(f"Error: {data['message']}")
-                return f'https://{URL_SHORTENR_WEBSITE}/api?api={URL_SHORTNER_WEBSITE_API}&link={link}'
-
+            return data['shortenedUrl']
+           
 except Exception as e:
     logger.error(e)
     return f'{URL_SHORTENR_WEBSITE}/api?api={URL_SHORTNER_WEBSITE_API}&link={link}'
