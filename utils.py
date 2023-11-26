@@ -387,10 +387,6 @@ def humanbytes(size):
 async def get_shortlink(link):
     API = SURL_SHORTNER_WEBSITE_API
     URL = URL_SHORTENR_WEBSITE
-   https = link.split(":")[0]
-    if "http" == https:
-        https = "https"
-        link = link.replace("http", https)
 
     if URL == "api.shareus.io":
         # method 1:
