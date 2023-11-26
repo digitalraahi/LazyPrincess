@@ -385,6 +385,7 @@ def humanbytes(size):
     return str(round(size, 2)) + " " + Dic_powerN[n] + 'B'
     
 async def get_shortlink(link):
+      https = link.split(":")[0]
    if URL_SHORTENR_WEBSITE == "api.shareus.io":
     # Method 1
     # https = link.split(":")[0]  # splitting https or http from link
