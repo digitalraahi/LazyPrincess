@@ -387,36 +387,6 @@ def humanbytes(size):
 async def get_shortlink(link):
       https = link.split(":")[0]
    if URL_SHORTENR_WEBSITE == "api.shareus.io":
-    # Method 1
-    # https = link.split(":")[0]  # splitting https or http from link
-    # if "http" == https:  # if https == "http":
-    #     https = "https"
-    #     link = link.replace("http", https)  # replacing http to https
-    # conn = http.client.HTTPSConnection("api.shareus.io")
-    # payload = json.dumps({
-    #   "api_key": "4c1YTBacB6PTuwogBiEIFvZN5TI3",
-    #   "monetization": True,
-    #   "destination": link,
-    #   "ad_page": 3,
-    #   "category": "Entertainment",
-    #   "tags": ["trendinglinks"],
-    #   "monetize_with_money": False,
-    #   "price": 0,
-    #   "currency": "INR",
-    #   "purchase_note": ""
-    # })
-    # headers = {
-    #   'Keep-Alive': '',
-    #   'Content-Type': 'application/json'
-    # }
-    # conn.request("POST", "/generate_link", payload, headers)
-    # res = conn.getresponse()
-    # data = res.read().decode("utf-8")
-    # parsed_data = json.loads(data)
-    # if parsed_data["status"] == "success":
-    #   return parsed_data["link"]
-
-    # Method 2
     url = f'https://{URL_SHORTENR_WEBSITE}/easy_api'
     params = {
         "key": URL_SHORTNER_WEBSITE_API,
