@@ -38,7 +38,7 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Others
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', 0))
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'MovieFlix')
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'MovieFlix_admin')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
 IMDB = is_enabled((environ.get('IMDB', "True")), True)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "False")), False)
@@ -125,11 +125,11 @@ if SELF_DELETE == "True":
 
 # Download Tutorial Button #
 DOWNLOAD_TEXT_NAME = "📥 HOW TO DOWNLOAD 📥"
-DOWNLOAD_TEXT_URL = "https://t.me/MovieFlix"
+DOWNLOAD_TEXT_URL = "https://t.me/MovieFlix_OG"
 
 # Custom Caption Under Button #
 CAPTION_BUTTON = "Get Updates"
-CAPTION_BUTTON_URL = "https://t.me/MovieFlix"
+CAPTION_BUTTON_URL = "https://t.me/MovieFlix_OG"
 
 LOG_STR = "Current Cusomized Configurations are:-\n"
 LOG_STR += ("IMDB Results are enabled, Bot will be showing imdb details for you queries.\n" if IMDB else "IMBD Results are disabled.\n")
